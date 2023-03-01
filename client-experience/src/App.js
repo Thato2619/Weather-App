@@ -14,10 +14,12 @@ function App() {
             <button>°F</button>
           </div>
 
-          <div className='section section_temperature'>
+          <div className='section section__temperature'>
             <div className='icon'>
               <h3>London, GB</h3>
-              <img src='https://za.pinterest.com/pin/765400899150381568/' alt='weather icon ' />
+              <img src='https://za.pinterest.com/pin/765400899150381568/'
+               alt='weather icon' 
+               />
               <h3>Cloudy </h3>
             </div>
             <div className='temperature'>
