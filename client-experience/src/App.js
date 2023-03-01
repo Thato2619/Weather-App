@@ -2,6 +2,7 @@
 
 import sunnyDay from './images/sunny-day.jpeg';
 import coldDay from './images/cold-day.jpeg';
+import Descriptions from './components/description/Descriptions';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             </div>
           </div>
              {/*bottom description*/ }
+             <Descriptions />
         </div>
       </div>
     </div>
