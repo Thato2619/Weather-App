@@ -9,7 +9,7 @@ function App() {
       <div className='overlay'>
         <div className='container'>
           <div className='section section__inputs'>
-            <input type="text" name='city'/>
+            <input type="text" name='city' placeholder='Enter City'/>
           </div>
         </div>
       </div>
