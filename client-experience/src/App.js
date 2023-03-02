@@ -4,8 +4,20 @@ import sunnyDay from './images/sunny-day.jpeg';
 import coldDay from './images/cold-day.jpeg';
 import Descriptions from './components/description/Descriptions';
 import { IoIosPartlySunny } from "react-icons/wi";
+import { useEffect } from "react";
+import { getTheFormattedWeatherData } from './weatherService';
 
 function App() {
+
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      const data = await getTheFormattedWeatherData("paris");
+    };
+
+    fetchWeatherData();
+  }, []);
+
+
   return (
     //this div is for the bg image
     <div className="App" style={{backgroundImage: `url(${coldDay})`}}>
