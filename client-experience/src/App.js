@@ -17,6 +17,11 @@ function App() {
     const fetchWeatherData = async () => {
       const data = await getTheFormattedWeatherData(city , units);
       setWeather(data);
+
+      //add dynamic background
+      const thresold = units === "metric" ? 20 : 60 //if tempo is less than 20 or equal to 20°C then change bg to snowy image 
+      if (data.temp <= thresold)  setbg(coldDay);//if tempo is more than 21 or equal to 60°C then change bg to sunny/brighter image 
+      else setbg(sunnyDay)
     };
 
     fetchWeatherData();
