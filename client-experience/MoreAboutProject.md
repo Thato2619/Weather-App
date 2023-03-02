@@ -26,4 +26,3 @@ To the very point where, React fails to compile deleted that contained Login and
 
 I don't know what I did but its quite weird
 
-### `npm start`
