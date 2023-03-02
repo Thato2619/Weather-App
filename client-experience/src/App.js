@@ -9,7 +9,8 @@ function App() {
   //make input text field work
   const [city, setCity] = useState("Paris");
   const [weather, setWeather] = useState(null);
-  const [units, setUnits] = useState("imperial")
+  const [units, setUnits] = useState("metric")
+  const [bg, setbg] = useState(sunnyDay)
 
   //fetch data
   useEffect(() => {
@@ -42,7 +43,7 @@ function App() {
 
   return (
     //this div is for the bg image
-    <div className="App" style={{ backgroundImage: `url(${coldDay})` }}>
+    <div className="App" style={{ backgroundImage: `url(${bg})` }}>
       <div className="overlay">
         {weather && (
           <div className="container">
