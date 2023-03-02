@@ -6,18 +6,20 @@ import { useEffect, useState } from "react";
 import { getTheFormattedWeatherData } from "./weatherService";
 
 function App() {
+  //make input text field work
+  const [city, setCity] = useState("Paris");
   const [weather, setWeather] = useState(null);
   const [units, setUnits] = useState("imperial")
 
   //fetch data
   useEffect(() => {
     const fetchWeatherData = async () => {
-      const data = await getTheFormattedWeatherData("paris" , units);
+      const data = await getTheFormattedWeatherData(city , units);
       setWeather(data);
     };
 
     fetchWeatherData();
-  }, [units]);
+  }, [units, city]);
 
   //add event listner to switch from metric to imperial
   const handleUnitsClick = (e) => {
@@ -27,8 +29,16 @@ function App() {
     const isCelsuis = currentUnit ==="C";
     button.innerText = isCelsuis ? "°F" : "°C";
     setUnits(isCelsuis ? "metric" : "imperial") 
-
   };
+
+  //create functions that enable text box to work
+  const enterKeyPressed = (e) => {
+    //13 is equilvalent for the 'enter' bucket
+    if (e.keyCode === 13) {
+      setCity(e.currentTarget.value);
+      e.currentTarget.blur()
+    }
+  }
 
   return (
     //this div is for the bg image
@@ -37,7 +47,7 @@ function App() {
         {weather && (
           <div className="container">
             <div className="section section__inputs">
-              <input type="text" name="city" placeholder="Enter City" />
+              <input onKeyDown={enterKeyPressed} type="text" name="city" placeholder="Enter City" />
               <button onClick={(e) => handleUnitsClick(e)}>°F</button>
             </div>
 
