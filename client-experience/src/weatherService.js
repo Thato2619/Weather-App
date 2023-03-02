@@ -1,6 +1,9 @@
 //get api_key
 const API_KEY = 'e1745f274f772287c0d082209965c8ef';
 
+//make weather icon url to match with the icon ID
+const makeIconUrl = (iconId) => `https://openweathermap.org/img/wn/${iconId}@2x.png`
+
 //get weatherData that is formattted 
 const getTheFormattedWeatherData = async (city, units = 'metric') => {      //units are metrics becasue its written in the documentation of the openweathermap.org website, where the api_key was found
 
@@ -26,7 +29,7 @@ const getTheFormattedWeatherData = async (city, units = 'metric') => {      //un
 
     return {
         description,
-        icon,
+        iconUrl: makeIconUrl(icon), //create icon variable that collects iconID
         temp,
         feels_like,
         temp_min,
