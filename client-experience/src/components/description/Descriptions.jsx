@@ -2,6 +2,10 @@ import React from 'react'
 import './descriptions.css';
 import { AiOutlineArrowDown }from 'react-icons/ai';
 
+import { FaArrowUp, FaArrowDown, Fawind}from 'react-icons/fa';
+import { Bihappy } from 'react-icons/bi';
+import { MdCompress, MdOutlineWaterDrop} from 'react-icons/md';
+
 
 const Descriptions = () => {
   return (
