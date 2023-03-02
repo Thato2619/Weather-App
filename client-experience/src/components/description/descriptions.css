@@ -1,5 +1,43 @@
+/*display 4 cards in grid*/
 .section__descriptions {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 2.5rem;
+}
+
+/*style the layout*/
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--section-overlay);
+
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+/*display and style react-icon (the arrow pointing down) */
+.description__card-icon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 12px;
+
+}
+
+/*capitalize all text in the small tags*/
+.description__card-icon>small{
+    text-transform: capitalize;
+}
+
+/*make website responsive to any and every device size*/
+@media screen and (max-width: 1042px) {
+    .section__descriptions{
+
+        grid-template-columns: 1fr 1fr;
+    }
 }

@@ -3,6 +3,7 @@
 import sunnyDay from './images/sunny-day.jpeg';
 import coldDay from './images/cold-day.jpeg';
 import Descriptions from './components/description/Descriptions';
+import { IoIosPartlySunny } from "react-icons/wi";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <div className='section section__temperature'>
             <div className='icon'>
               <h3>London, GB</h3>
-              <img src='https://za.pinterest.com/pin/765400899150381568/'
+              <img src='' 
                alt='weather icon' 
                />
               <h3>Cloudy </h3>
