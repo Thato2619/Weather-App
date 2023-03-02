@@ -1,9 +1,17 @@
+import express from "express";
+
 const express = require('express');
 const request = require('request');
 
 const app = express();
 
-app.get('/', (req,res) => {
+app.use(express.json()); 
+
+app.listen(3000, ()=>{
+    console.log("Connected!")
+})
+
+/*app.get('/', (req,res) => {
     let city = req.query.city;
     const request = require('request');
 request(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e1745f274f772287c0d082209965c8ef`, 
@@ -19,5 +27,5 @@ function (error, response, body) {
 
 })
 
-app.listen(3000, () => console.log('server started on port 3000'));
+app.listen(3000, () => console.log('server started on port 3000'));*/
 
