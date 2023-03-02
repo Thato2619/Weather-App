@@ -17,7 +17,18 @@ function App() {
     };
 
     fetchWeatherData();
-  }, []);
+  }, [units]);
+
+  //add event listner to switch from metric to imperial
+  const handleUnitsClick = (e) => {
+    const button = e.currentTarget;
+    const currentUnit = button.innerText.slice(1);
+
+    const isCelsuis = currentUnit ==="C";
+    button.innerText = isCelsuis ? "°F" : "°C";
+    setUnits(isCelsuis ? "metric" : "imperial") 
+
+  };
 
   return (
     //this div is for the bg image
@@ -27,7 +38,7 @@ function App() {
           <div className="container">
             <div className="section section__inputs">
               <input type="text" name="city" placeholder="Enter City" />
-              <button>°F</button>
+              <button onClick={(e) => handleUnitsClick(e)}>°F</button>
             </div>
 
             <div className="section section__temperature">
