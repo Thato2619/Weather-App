@@ -4,11 +4,13 @@ const express = require('express');
 const request = require('request');
 
 const app = express();
+//instead the process.env.PORT automaically reads the serve for you 
+const port = process.env.PORT || 3000
 
 app.use(express.json()); 
 app.use(request.json()); //use request within json package
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log("Connected!")
 })
 
@@ -28,5 +30,5 @@ function (error, response, body) {
 
 })
 
-app.listen(3000, () => console.log('server started on port 3000'));
+app.listen(port, () => console.log('server started on port 3000'));
 

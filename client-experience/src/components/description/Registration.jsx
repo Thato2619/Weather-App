@@ -3,7 +3,7 @@ import React from 'react'
 function Registration() {
   return (
     <div>
-<section className="vh-100 bg-image" style={{backgroundImage: 'url("https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp")'}}>
+<section className="vh-100 bg-image" style={{backgroundImage: 'url("/images/sun-bg.jpeg")'}}>
   <div className="mask d-flex align-items-center h-100 gradient-custom-3">
     <div className="container h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
@@ -37,7 +37,7 @@ function Registration() {
                 <div className="d-flex justify-content-center">
                   <button type="button" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                 </div>
-                <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" className="fw-bold text-body"><u>Login here</u></a></p>
+                <p className="text-center text-muted mt-5 mb-0">Have already an account? <a href="Login.jsx" className="fw-bold text-body"><u>Login here</u></a></p>
               </form>
             </div>
           </div>
