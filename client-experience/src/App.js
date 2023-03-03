@@ -5,7 +5,32 @@ import { IoIosPartlySunny } from "react-icons/wi";
 import { useEffect, useState } from "react";
 import { getTheFormattedWeatherData } from "./weatherService";
 
+//install react-router dom
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Login from "./components/description/Login";
+import Registration from "./components/description/Registration";
+
+//page paths that allows me to see the login and registration form
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: <Login />,
+  },
+
+  {
+    path: "/register",
+    element: <Registration />,
+  },
+]); 
+
 function App() {
+  <div>
+    <RouterProvider router={router} />
+  </div>
+  
   //make input text field work
   const [city, setCity] = useState("Paris");
   const [weather, setWeather] = useState(null);
