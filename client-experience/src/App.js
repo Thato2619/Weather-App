@@ -4,8 +4,6 @@ import Descriptions from "./components/description/Descriptions";
 import { IoIosPartlySunny } from "react-icons/wi";
 import { useEffect, useState } from "react";
 import { getTheFormattedWeatherData } from "./weatherService";
-
-
 //install react-router dom
 import {BrowseRouter as Router,Switch,Route, Link} from 'react-router-dom';
 
