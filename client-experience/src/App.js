@@ -6,7 +6,8 @@ import { useEffect, useState } from "react";
 import { getTheFormattedWeatherData } from "./weatherService";
 //install react-router dom
 import {BrowseRouter as Router,Switch,Route, Link} from 'react-router-dom';
-
+import Login from "./components/description/Login/Login";
+import Registration from "./components/description/Register/Registration";
 
 //page paths that allows me to see the login and registration form
 
